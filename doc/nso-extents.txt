@@ -1,0 +1,6 @@
+Name    Address     Size
+rltd    00000000    00004000
+main    00004000    00CD1000
+sdk     00CD5000    00941000
+
+Custom subsdk0 is inserted between main and sdk and thus inherits the address of sdk.

@@ -1,0 +1,80 @@
+@ Replace original Profile functions to consider custom profiles
+Profile_ctor:
+    type:   b
+    addr:   0x00017F6C
+    func:   Profile::Profile(Actor* (*)(ActorBuildInfo const*), unsigned int, sead::SafeStringBase<char> const&, ActorInfo const*, unsigned int)
+
+Profile_get:
+    type:   b
+    addr:   0x000182A0
+    func:   Profile::get(unsigned int)
+
+Profile_getPriority:
+    type:   b
+    addr:   0x0001839C
+    func:   Profile::getPriority(unsigned int)
+
+Profile_getHasResources:
+    type:   b
+    addr:   0x000183C8
+    func:   Profile::getHasResources(unsigned int)
+
+Profile_getResourceCount:
+    type:   b
+    addr:   0x000183F0
+    func:   Profile::getResourceCount(unsigned int)
+
+Profile_getResourceList:
+    type:   b
+    addr:   0x00020FF0
+    func:   Profile::getResourceList(unsigned int)
+
+
+@ Disable max sprite count checks (Warning: Invalid sprite ids will now crash!)
+SpriteToProfileTableSize1:
+    type:   instr
+    instr:  cmp r1, #0x10000
+    addr:   0x000046A0
+
+SpriteToProfileTableSize2:
+    type:   instr
+    instr:  cmp r1, #0x10000
+    addr:   0x00006250
+
+SpriteToProfileTableSize3:
+    type:   instr
+    instr:  cmp r1, #0x10000
+    addr:   0x0000642C
+
+SpriteToProfileTableSize4:
+    type:   instr
+    instr:  cmp r1, #0x10000
+    addr:   0x000065A4
+
+SpriteToProfileTableSize5:
+    type:   instr
+    instr:  cmp r1, #0x10000
+    addr:   0x000066FC
+
+SpriteToProfileTableSize6:
+    type:   instr
+    instr:  cmp r1, #0x10000
+    addr:   0x00006C34
+
+
+@ Disables the game from setting original sprite -> profile ids
+SpriteToProfileTableNoSInit:
+    type:   instr
+    instr:  bx lr
+    addr:   0x00014724
+
+
+ProfileCountLoadArchives:
+    type:   bl
+    func:   loadNumProfilesR4
+    addr:   0x0000919C
+
+ProfileCountUnloadAll:
+    type:   bl
+    func:   loadNumProfilesR6
+    addr:   0x00009264

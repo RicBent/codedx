@@ -1,0 +1,14 @@
+BobOmb_noTypeCountCheck:
+    type:   instr
+    instr:  mov r1, r0,LSR#28
+    addr:   0x0025CF50
+
+BobOmb_decideFirstState_hook:
+    type:   b
+    func:   BobOmb_decideFirstState_hook
+    addr:   0x0025D5B0
+
+BobOmb_checkColliderAddTimer_hook:
+    type:   bl
+    func:   BobOmb_checkColliderAddTimer_hook
+    addr:   0x0025DB24

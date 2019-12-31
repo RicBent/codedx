@@ -1,0 +1,4 @@
+misc_init:
+    type:   bl
+    addr:   0x00562998
+    sym:    misc_init

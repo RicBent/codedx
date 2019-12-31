@@ -1,0 +1,4 @@
+static_init:
+    type:   b
+    addr:   0x0000019C
+    sym:    static_init_hook

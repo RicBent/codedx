@@ -1,0 +1,9 @@
+SumoBrosLightning_beginState_Down_hook:
+    type:   b
+    func:   _ZN17SumoBrosLightning9setYSpeedEv
+    addr:   0x00334CA8
+
+SumoBrosLightning_onGroundTouch_hook:
+    type:   bl
+    func:   _ZN17SumoBrosLightning13onGroundTouchEP9StateBase
+    addr:   0x00334D50

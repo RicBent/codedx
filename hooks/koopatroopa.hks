@@ -1,0 +1,4 @@
+KoopaTroopa_decideFirstState_hook:
+    type:   bl
+    func:   KoopaTroopa_decideFirstState_hook
+    addr:   0x0035C744

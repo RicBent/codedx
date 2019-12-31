@@ -1,0 +1,28 @@
+# Build files
+/build/
+/tools/instruction.o
+/main.ld
+/subsdk0
+/subsdk0.elf
+/subsdk0.sym
+*.ips
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDA Pro
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+
+# User config files
+/ftp.cfg
+
+# Editor files
+.vscode/
+
+# Misc
+/tmp/
